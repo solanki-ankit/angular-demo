@@ -1,0 +1,20 @@
+<div>
+  <h1> Login </h1>
+  <form name="login-form" (ngSubmit)="f.form.valid && login()" #f="ngForm">
+    <div>
+      Email: <input type="text" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+      <p *ngIf="f.submitted && !email.valid" class="error-text">Email is required</p>
+      <!-- <div *ngIf="email.invalid && f.submitted">
+        <p [hidden]="!email.hasError('required')" class="error-text">Email is required</p>
+        <p [hidden]="!email.hasError('pattern')" class="error-text">Valid Email is required</p>
+      </div> -->
+    </div>
+    <div>
+      Password: <input type="password" name="password" [(ngModel)]="model.password" #password="ngModel" required>
+      <p *ngIf="f.submitted && !password.valid" class="error-text">Password is required</p>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+</div>
