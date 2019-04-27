@@ -5,13 +5,15 @@ import { HomeComponent }  from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { PublicAuthGuard } from './_guards/public.auth.guard';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 // const routes: Routes = [];
 
 const routes: Routes = [
   { path: '', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent, canActivate: [PublicAuthGuard] },
-  { path: 'checkbox', component: CheckboxComponent}
+  { path: 'checkbox', component: CheckboxComponent},
+  { path: 'form', component: SimpleformComponent}
 ];
 
 @NgModule({

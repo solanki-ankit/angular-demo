@@ -1,0 +1,29 @@
+<!-- <form name="myform" (ngSubmit)="onSubmit()" #f="ngForm" >
+  <div class="form-group">
+    <input type="text" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+  </div>
+  <div class="form-group">
+    <label for="avatar">Avatar</label>
+    <input type="file" id="avatar" (change)="onFileChange($event)" [(ngModel)]="model.fileInput" #fileInput="ngModel">
+  </div>
+  <button type="submit" class="btn btn-success">Submit</button>
+</form> -->
+
+<div>
+  <h1> Login </h1>
+  <form name="login-form" (ngSubmit)="onSubmit()" #f="ngForm">
+    <div>
+      <input type="text" name="email" [(ngModel)]="model.email" #email="ngModel" required>
+      <!-- <div *ngIf="email.invalid && f.submitted">
+        <p [hidden]="!email.hasError('required')" class="error-text">Email is required</p>
+        <p [hidden]="!email.hasError('pattern')" class="error-text">Valid Email is required</p>
+      </div> -->
+    </div>
+    <div>
+      <input type="file" id="avatar" (change)="onFileChange($event)" multiple>
+    </div>
+    <div>
+      <input type="submit">
+    </div>
+  </form>
+</div>

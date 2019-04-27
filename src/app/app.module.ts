@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { PublicAuthGuard } from './_guards/public.auth.guard';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     LoginComponent,
     HomeComponent,
     CheckboxComponent,
+    SimpleformComponent,
   ],
   imports: [
     BrowserModule,
