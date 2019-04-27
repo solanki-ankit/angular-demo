@@ -1,0 +1,14 @@
+
+<form [formGroup]="myForm">
+	<div *ngFor="let data of emails">
+		<input type="checkbox" (change)="onChange(data.email, $event.target.checked)"> {{data.email}}<br>
+	</div>
+</form>
+
+<pre>Form values: {{myForm.value | json}}</pre>
+
+<div *ngFor="let data of emails">
+  <input type="checkbox" (change)="formonChange(data.email, $event.target.checked)"> {{data.email}}<br>
+</div>
+
+<pre> {{model | json}}</pre>
